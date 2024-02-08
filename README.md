@@ -18,16 +18,16 @@ The following versions of listed technologies are known to work:
 * Gradle		- 8.6
 
 ## OPERATIONS
-* beers/
-      * shows list of all beers
-* beers/review?id=x
-      * shows the review of a beer with id 'x' (if it exists)
-* beers/review/new?id=x&rating=y&text=z
-      * creates a new review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary
-* beers/review/edit?id=x&rating=y&text=z
-      * edits an existing review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary
-* beers/review/remove?id=x
-      * removes the review of a beer with id 'x' 
+- beers/
+      - shows list of all beers
+- beers/review?id=x
+      - shows the review of a beer with id 'x' (if it exists)
+- beers/review/new?id=x&rating=y&text=z
+      - creates a new review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary
+- beers/review/edit?id=x&rating=y&text=z
+      - edits an existing review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary
+- beers/review/remove?id=x
+      - removes the review of a beer with id 'x' 
 
 ## USE-EXAMPLE
 http://localhost:8080/beers/review?id=64
