@@ -19,7 +19,7 @@ The following versions of listed technologies are known to work:
 
 ## OPERATIONS
 - beers/
-      - shows list of all beers
+-       shows list of all beers
 - beers/review?id=x
       - shows the review of a beer with id 'x' (if it exists)
 - beers/review/new?id=x&rating=y&text=z
