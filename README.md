@@ -1,6 +1,6 @@
 # Beer
 ## SYNOPSIS
-       Simple app that stores data about various beers and allows user to submit and read reviews about the stored beer
+Simple app that stores data about various beers and allows user to submit and read reviews about the stored beer
 
 ## DESCRIPTION
 Beer is a Spring Boot (extension of the Spring framework) application for storing data about beer using Spring Data MongoDB
