@@ -1,13 +1,9 @@
-package com.example.demo.model;
-
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+package com.bilko.beer.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "BeerItem")
+@Document(collection = "BeerItems")
 public class BeerItem {
 
         @Id
@@ -25,7 +21,7 @@ public class BeerItem {
         private String blg;
         
         public BeerItem(long id, String uid, String brand, String name, String style, String hop, String yeast, String malts, String ibu, String alcohol, String blg) {
-            super(); //??
+            super();
             this.id = id;
             this.uid = uid;
             this.brand = brand;
