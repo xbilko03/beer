@@ -1,4 +1,4 @@
-package com.bilko.beer.start;
+package com.bilko.beer.bal;
 
 import java.util.Arrays;
 import java.util.List;

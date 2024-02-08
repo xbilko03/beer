@@ -1,4 +1,4 @@
-package com.bilko.beer.controller;
+package com.bilko.beer.bal;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,6 +15,7 @@ import com.bilko.beer.model.ReviewItem;
 import com.bilko.beer.dal.BeerItemRepository;
 import com.bilko.beer.dal.ReviewItemRepository;
 
+/* Exposes the REST API operations */
 @RestController
 public class BeerController {
 	private final BeerItemRepository beerRepository;
