@@ -1,6 +1,7 @@
 package com.bilko.beer.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,14 +11,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bilko.beer.model.BeerItem;
+import com.bilko.beer.model.ReviewItem;
 import com.bilko.beer.dal.BeerItemRepository;
+import com.bilko.beer.dal.ReviewItemRepository;
 
 @RestController
 public class BeerController {
 	private final BeerItemRepository beerRepository;
+	private final ReviewItemRepository reviewRepository;
 	
-	public BeerController(BeerItemRepository beerRepository) {
+	public BeerController(BeerItemRepository beerRepository, ReviewItemRepository reviewRepository) {
 		this.beerRepository = beerRepository;
+		this.reviewRepository = reviewRepository;
 	}
 	
 	/* Read beer list */
@@ -28,36 +33,25 @@ public class BeerController {
 
 	/* Create new review */
 	@PostMapping("beers/review/new")
-	public BeerItem addReview(@RequestParam(value = "id") long beerID) {
-		//todo
-		return beerRepository.save(new BeerItem(beerID, "bucahc", "b", "c", "d", "e", "f", "g", "h", "i", "j"));
+	public ReviewItem addReview(@RequestParam(value = "id") long beerID, @RequestParam(value = "rating") long rating, @RequestParam(value = "text") String text) {
+		return reviewRepository.save(new ReviewItem(beerID, rating, text));
 	}
 
 	/* Read review */
-	@GetMapping("beers/review/detail")
-	public BeerItem readReview(@RequestParam(value = "id") long beerID) {
-		//todo
-		return beerRepository.save(new BeerItem(beerID, "bucahc", "b", "c", "d", "e", "f", "g", "h", "i", "j"));
+	@GetMapping("beers/review")
+	public Optional<ReviewItem> readReviewId(@RequestParam(value = "id") long beerID) {
+		return reviewRepository.findById(beerID);
 	}
 
 	/* Update review */
 	@GetMapping("beers/review/edit")
-	public BeerItem updateReview(@RequestParam(value = "id") long beerID) {
-		//todo
-		return beerRepository.save(new BeerItem(beerID, "bucahc", "b", "c", "d", "e", "f", "g", "h", "i", "j"));
+	public ReviewItem updateReview(@RequestParam(value = "id") long beerID, @RequestParam(value = "rating") long rating, @RequestParam(value = "text") String text) {
+		return reviewRepository.save(new ReviewItem(beerID, rating, text));
 	}
 
 	/* Delete review */
-	@GetMapping("beers/review/remove")
-	public BeerItem deleteReview(@RequestParam(value = "id") long beerID) {
-		//todo
-		return beerRepository.save(new BeerItem(beerID, "bucahc", "b", "c", "d", "e", "f", "g", "h", "i", "j"));
+	@PostMapping("beers/review/remove")
+	public void deleteReview(@RequestParam(value = "id") long beerID) {
+		reviewRepository.deleteById(beerID);
 	}
-
-	/*
-	@GetMapping("/greeting")
-	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new Greeting(counter.incrementAndGet(), String.format(template, name));
-	}
-	*/
 }
