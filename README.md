@@ -39,7 +39,7 @@ remove the review of a beer with id 'x':
 http://localhost:8080/beers/review?id=64
 
 ## DEMONSTRATION
-[youtube link]
+https://youtu.be/qaMazmFHTYU
       
 ## BONUS
 In case we want to implement the support of multiple users (not taking authentication or authorization into account),
