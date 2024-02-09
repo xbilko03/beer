@@ -16,23 +16,23 @@ The following versions of listed technologies are known to work:
 ## OPERATIONS
 show list of all beers:
 
-      beers/
+      /beers
       
 show the review of a beer with id 'x' (if it exists):
 
-      beers/review?id=x
+      /beers/review?id=x
       
 create a new review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary:
 
-      beers/review/new?id=x&rating=y&text=z
+      /beers/review/new?id=x&rating=y&text=z
       
 edit an existing review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary:
 
-       beers/review/edit?id=x&rating=y&text=z
+       /beers/review/edit?id=x&rating=y&text=z
        
 remove the review of a beer with id 'x':
 
-       beers/review/remove?id=x
+       /beers/review/remove?id=x
        
 
 ## USE-EXAMPLE
