@@ -14,23 +14,23 @@ The following versions of listed technologies are known to work:
 * Gradle		- 8.6
 
 ## OPERATIONS
-shows list of all beers:
+show list of all beers:
 
       beers/
       
-shows the review of a beer with id 'x' (if it exists):
+show the review of a beer with id 'x' (if it exists):
 
       beers/review?id=x
       
-creates a new review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary:
+create a new review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary:
 
       beers/review/new?id=x&rating=y&text=z
       
-edits an existing review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary:
+edit an existing review of a beer with id 'x' with 'y'/5 stars rating and 'z' review commentary:
 
        beers/review/edit?id=x&rating=y&text=z
        
-removes the review of a beer with id 'x':
+remove the review of a beer with id 'x':
 
        beers/review/remove?id=x
        
