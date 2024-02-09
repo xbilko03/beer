@@ -45,13 +45,13 @@ public class BeerController {
 	}
 
 	/* Update review */
-	@GetMapping("beers/review/edit")
+	@PostMapping("beers/review/edit")
 	public ReviewItem updateReview(@RequestParam(value = "id") long beerID, @RequestParam(value = "rating") long rating, @RequestParam(value = "text") String text) {
 		return reviewRepository.save(new ReviewItem(beerID, rating, text));
 	}
 
 	/* Delete review */
-	@PostMapping("beers/review/remove")
+	@DeleteMapping("beers/review/remove")
 	public void deleteReview(@RequestParam(value = "id") long beerID) {
 		reviewRepository.deleteById(beerID);
 	}
