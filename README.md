@@ -48,7 +48,9 @@ all the REST API operations which interact with reviews should contain a user-id
 Also, a ReviewItem's attributes (object we store in database representing a user review) 
 would also be different:
 
-The PK (Primary key) would no longer represent beer the user is reviewing, it would be just an identifier of the particular review. The relation of the review to a beer would be stored in a new separate attribute (i.e. beerID), the review should also keep the relation to the user that created it (i.e. userID).
+The FK (Foreign key) would no longer represent beer the user is reviewing, it would be just an identifier of the particular review. The relation of the review to a beer would be stored in a new separate attribute (i.e. beerID), the review should also keep the relation to the user that created it (i.e. userID).
+
+It should suffice, however, for the sake of future use, we should also consider storing a list of users in our database.
 
 ## AUTHOR
 Jozef Bilko (xbilko03)
